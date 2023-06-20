@@ -4,8 +4,9 @@ import Image from "next/image";
 
 export default function Dashboard() {
   return (
-    <section class="w-full h-screen bg-no-repeat bg-center px-0">
-      <img
+    <section class="w-full h-screen bg-no-repeat bg-center px-0 overflow-hidden">
+      <Image
+        fill
         src="/bahrain.png"
         class="w-full h-full absolute top-0 left-0 z-0 
            lg:object-fill object-cover"
