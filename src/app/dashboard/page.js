@@ -22,9 +22,9 @@ export default function Dashboard() {
               Bahrain ABC Bank
             </h1>
             <p class="sm:text-sm md:text-md lg:text-lg mr-10 md:mr-2 lg:mr-12">
-              "Illuminate the Future with Cutting-Edge LED Systems! Bahrain ABC
-              Bank trusts us to bring brilliance to their building. Experience
-              the benefits of our advanced LED systems today."
+              &quot;Illuminate the Future with Cutting-Edge LED Systems! Bahrain
+              ABC Bank trusts us to bring brilliance to their building.
+              Experience the benefits of our advanced LED systems today.&quot;
             </p>
           </div>
 
