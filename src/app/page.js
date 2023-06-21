@@ -66,8 +66,8 @@ export default function Home() {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      {herokuData.map((data) => (
-        <SwiperSlide>
+      {herokuData.map((data, index) => (
+        <SwiperSlide key={index}>
           <ItemSwiper data={data} />
         </SwiperSlide>
       ))}
