@@ -40,21 +40,32 @@ body {
 .button {
   background: linear-gradient(225deg, #000000 0%, #000080 100%);
   color: white;
-  padding: 5px 30px;
+  font-size: 18px;
+  padding: 10px;
   border-radius: 5px;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  @media (min-width: 561px) {
+    font-size: 24px;
+    padding: 0px;
+  }
 }
 
 .buttonTransparent {
   background: transparent;
   color: white;
-  padding: 5px 30px;
+  font-size: 18px;
+  padding: 10px;
   border: 1px solid white;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+
+  @media (min-width: 561px) {
+    font-size: 24px;
+    padding: 0px;
+  }
 }
 
 p {
@@ -63,4 +74,16 @@ p {
 
 .btnContainer {
   margin-top: 42px;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-button-prev {
+  color: red;
+}
+
+.swiper-button-next {
+  color: #000;
 }
