@@ -9,21 +9,25 @@ export default function ItemSwiper({ data }) {
 
   return (
     <section class="w-full h-screen bg-no-repeat bg-center px-0 overflow-hidden">
-      {/* <Image
-        fill
-        src={data.image}
-        class="w-full h-full absolute top-0 left-0 z-0
-           lg:object-fill object-cover"
-        alt="Image alt text"
-      /> */}
+      {data.type == "photo" && (
+        <Image
+          fill
+          src={data.image}
+          class="w-full h-full absolute top-0 left-0 z-0
+          lg:object-fill object-cover"
+          alt="Image alt text"
+        />
+      )}
 
-      <video
-        class="w-full h-full absolute top-0 left-0 z-0 object-cover"
-        src={data.video}
-        autoPlay
-        loop
-        muted
-      />
+      {data.type == "video" && (
+        <video
+          class="w-full h-full absolute top-0 left-0 z-0 object-cover"
+          src={data.video}
+          autoPlay
+          loop
+          muted
+        />
+      )}
 
       <div className="overlay"></div>
 
@@ -39,15 +43,15 @@ export default function ItemSwiper({ data }) {
           </div>
 
           <div class="btnContainer flex mt-3 w-full pl-3 ml-3">
-            <button class="button mr-2 md:w-38 md:h-10 lg:w-44 lg:h-12">
+            <button class="button mr-2 w-40 md:w-38 md:h-10 lg:w-44 lg:h-12">
               View Profile
             </button>
-            <button class="buttonTransparent md:w-38 md:h-10 lg:w-44 lg:h-12">
+            <button class="buttonTransparent w-40 md:w-38 md:h-10 lg:w-44 lg:h-12 lg:text-xl">
               See Product
             </button>
           </div>
 
-          <div class="flex mt-10 h-px bg-[#FFF] w-11/12 md:w-1/3 lg:w-1/3" />
+          <div class="flex mt-10 h-px bg-[#FFF] w-full sm:w-11/12 md:w-2/5 md:pr-10" />
         </div>
       </div>
     </section>
