@@ -20,6 +20,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 
+import Carousel from "react-material-ui-carousel";
+
 export default function Home() {
   useEffect(() => {}, []);
 
@@ -59,22 +61,28 @@ export default function Home() {
   ];
 
   return (
-    <Swiper
-      cssMode={true}
-      modules={[Navigation, Pagination, A11y, Autoplay, Scrollbar, FreeMode]}
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      // autoplay
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
-    >
-      {herokuData.map((data, index) => (
-        <SwiperSlide key={index}>
-          <ItemSwiper data={data} />
-        </SwiperSlide>
+    // <Swiper
+    //   cssMode={true}
+    //   modules={[Navigation, Pagination, A11y, Autoplay, Scrollbar, FreeMode]}
+    //   spaceBetween={50}
+    //   slidesPerView={1}
+    //   navigation
+    //   // autoplay
+    //   scrollbar={{ draggable: true }}
+    //   onSwiper={(swiper) => console.log(swiper)}
+    //   onSlideChange={() => console.log("slide change")}
+    // >
+    //   {herokuData.map((data, index) => (
+    //     <SwiperSlide key={index}>
+    //       <ItemSwiper data={data} />
+    //     </SwiperSlide>
+    //   ))}
+    // </Swiper>
+
+    <Carousel navButtonsAlwaysVisible={true}>
+      {herokuData.map((data, i) => (
+        <ItemSwiper key={i} data={data} />
       ))}
-    </Swiper>
+    </Carousel>
   );
 }
